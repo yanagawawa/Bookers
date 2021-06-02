@@ -1,10 +1,10 @@
 <body>
- 
+
   <h1>Editing Book</h1>
 
   <%= form_with model:@book, local: true, class: "edit_book", id: "edit_book" do |f| %>
    <div class="field">
-    
+
    <% if @book.errors.any? %>
     <div id="error_explanation">
      <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
@@ -15,7 +15,7 @@
      </ul>
     </div>
    <% end %>
-   
+
     <lavel for="book_title">Title</lavel><br>
     <%= f.text_field :title %>
    </div>
