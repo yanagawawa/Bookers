@@ -35,10 +35,18 @@
 
  <h2>New book</h2>
 <%= form_with model:@book, url:'/books', local:true, class: "new_book", id: "new_book" do |f| %>
-  <div class="field">
+
    <% if @book.errors.any? %>
+   <div id="error_explanation">
     <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
+    <ul>
+     <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+     <% end %>
+    </ul>
+   </div>
    <% end %>
+  <div class="field">
    <lavel for="book_title">Title</lavel><br>
    <%= f.text_field :title %>
   </div>

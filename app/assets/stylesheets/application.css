@@ -33,6 +33,17 @@ td{
     padding-right: 5px;
 }
 
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
 p, ol, ul, td {
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 13px;
@@ -44,6 +55,32 @@ div.field, div.actions {
     margin-bottom: 10px;
 }
 
+
+.field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+}
+
 #notice{
     color:green;
+}
+
+#error_explanation {
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+#error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
 }
